@@ -13,8 +13,9 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category) {
+  const menuItem = { name, price, category }
+  return menuItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -25,19 +26,20 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const sushi = createMenuItem("Spider Roll", 18, "Fancy Food");
+const steakDinner = createMenuItem("Porterhouse with sides", 25, "Dinner");
+const dessertChimi = createMenuItem("Apple Chimichanga", 8, "Dessert");
 
-
+console.log(sushi, steakDinner, dessertChimi);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
-
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string that could be "teacher", "student", or "public"
   3. Depending on the string, it will return the correct discounted price
   4. Log the correct returned price to the console
-
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
@@ -90,7 +92,6 @@ Reyna's feedback is missing! Use what you know to do the following:
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
-
 Use the getReviewByIndex function below to do the following:
   1. Receive two arguements: the array that holds all the reviews and an index position of the review to display
   2. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
@@ -107,7 +108,6 @@ function getReviewByIndex(/*Your code here*/) {
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
-
 Use the getLastReview function below to do the following:
   1. Receive an array of objects 
   2. Return a string in the format: "{name} gave the restaurant a {rating} star review and, their feedback was: {feedback}"
@@ -129,7 +129,6 @@ Use the getReviewsByRating function below to do the following:
   1. Receive the array that holds all the reviews
   2. Receive a rating
   3. Return an array with all the reviews in that range
-
   For example: getReviewByRating(reviews, 4) would return these reviews in the 4 range (4-4.9):
   [
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
@@ -147,7 +146,6 @@ Use the getReviewsByRating function below to do the following:
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
   2. Return an array with all the reviews that have more than 15 words in their feedback
-
   For example: getLongReviews(reviews) would return:
   [
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
@@ -163,7 +161,6 @@ function getLongReviews(/* code here */) {
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
-
 Use the carMaker function below to do the following:
   1. Receive a value representing the odometer (how many miles it's been driven) and use that when creating the object
   2. Create a drive method inside the object that increases the odometer value
@@ -172,7 +169,6 @@ Use the carMaker function below to do the following:
      a. The drive method which, when called, takes a distance value as its parameter
      b. The drive method should also cause the odometer value in the object to be increased by the distance
      c. Then the drive method should return the updated value of the odometer
-
   For example: Let's say we created the object in the variable car1 with an odometer value of 10.
   Then we called car1.drive(100)
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
@@ -185,15 +181,15 @@ function carMaker(/* code here */) {
 }
 
 
-/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
+// /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
+// function foo(){
+//   console.log('its working');
+//   return 'bar';
+// }
 
-export default{
-  foo,
-  createMenuItem,
-  getReviewByIndex,
-  getLastReview,
-}
+// export default{
+//   foo,
+//   createMenuItem,
+//   getReviewByIndex,
+//   getLastReview,
+// }.
